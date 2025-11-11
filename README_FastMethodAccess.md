@@ -59,6 +59,6 @@ object result = invoker(instance, new object[] { arg1, arg2 });
 ## 作者情報
 
 - Rikou Natsuki (夏木 梨好)
-- GitHub: [Natsuki-Rikou](https://github.com/Natsuki-Rikou)
-- お問い合わせは [Issues](https://github.com/Natsuki-Rikou/XmlFileSerializer/issues) まで
+- GitHub: [RikouNatsuki](https://github.com/RikouNatsuki)
+- お問い合わせは [Issues](https://github.com/RikouNatsuki/XmlFileSerializer/issues) まで
 
