@@ -8,7 +8,7 @@ C# 標準 XmlSerializer の制約（カプセル化不可、public限定、ル�
 
 ## 特徴・主な機能
 
-- **private/protected/internal プロパティ・フィールドもシリアライズ／デシリアライズ可能**
+- **private/protected/internal プロパティをシリアライズ／デシリアライズ可能**
 - **ルート要素名や属性名を柔軟に制御可能**
 - **.NET 標準の XML 属性（XmlElement, XmlAttribute, XmlText, XmlIgnore, XmlRoot など）に対応**
 - **式木（Expression Tree）による高速な[プロパティ](README_FastPropertyAccess.md)／[メソッドアクセス](README_FastMethodAccess.md)**
