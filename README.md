@@ -8,7 +8,7 @@ C# 標準 XmlSerializer の制約（カプセル化不可、public限定、ル�
 
 ## 特徴・主な機能
 
-- **private/protected/internal プロパティをシリアライズ／デシリアライズ可能**
+- **public/private/protected/internal プロパティをシリアライズ／デシリアライズ可能**
 - **ルート要素名や属性名を柔軟に制御可能**
 - **.NET 標準の XML 属性（XmlElement, XmlAttribute, XmlText, XmlIgnore, XmlRoot など）に対応**
 - **式木（Expression Tree）による高速な[プロパティ](README_FastPropertyAccess.md)／[メソッドアクセス](README_FastMethodAccess.md)**
@@ -44,11 +44,12 @@ C# 標準 XmlSerializer の制約（カプセル化不可、public限定、ル�
 
 ## 目的
 
-標準 XmlSerializer の制約を回避し、より柔軟かつ安全な XML シリアライズ／デシリアライズを実現します。
+- 標準 XmlSerializer の制約を回避し、より柔軟かつ安全な XML シリアライズ／デシリアライズを実現します。
+- 標準 XmlSerializer を既に利用されているなら、メソッドコールを差し替えるだけで機能します。
 
 ## 背景
 
-- 保守性・技術的平易さ・実行速度を度外視し、汎用性・再利用性の追求を目的として開発しました。
+- 汎用性・再利用性を重視し、標準XmlSerializerの制約を補うことを目的として開発しました。
 - 個人の技術検証および OSS 活動の一環として公開したプロジェクトです。
 - 業務で使用されたコードや設計は一切参照せず、独自に設計・実装しています。
 - 技術的な最適化の結果、類似する構造が他に存在する可能性はありますが、他プロジェクトへの依拠性はありません。
@@ -61,7 +62,9 @@ C# 標準 XmlSerializer の制約（カプセル化不可、public限定、ル�
 
 ## 使い方
 
-### 標準 XmlSerializer との比較例
+以下のように、標準XmlSerializerの呼び出し部分を本ライブラリのメソッドに置き換えるだけで、既存プロジェクトにも簡単に導入できます。
+
+### 標準 XmlSerializer との差し替え例
 
 ```csharp
 // 標準XmlSerializer
